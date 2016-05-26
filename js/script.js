@@ -154,8 +154,8 @@ function updateBadGuys() {
 function updateShowdown() {
 	var c = "";
 	c += "<h2 class=\"current\">" + mastermindList[0] + "</h2> \n<div class=\"pane\"><img src=\"images/masterminds/" + indexMasterminds[0] + ".jpg\" width=\"400px\" height=\"300px\" /></div>"
-	c += "<h2>" + pickedScheme[0] + "</h2> \n<div class=\"pane\"></div>";
-	c += "<h2>" + numOfTwists + " Twists</h2> \n<div class=\"pane\"></div>";
+	c += "<h2>The scheme is: " + pickedScheme[0] + "</h2> \n<div class=\"pane\"></div>";
+	c += "<h2>You will need " + numOfTwists + " Twists</h2> \n<div class=\"pane\"></div>";
 	
 	document.getElementById("showdown").innerHTML = c;
 	$("#showdown").tabs("#showdown div.pane",{tabs: 'h2'});//, effect: 'slide'});
