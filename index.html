@@ -10,13 +10,13 @@
 <script src="js/script.js"></script>
 <script src="js/heroes.js"></script>
 <script src="js/villians.js"></script>
-<script src="js/jquerytools.min.js"></script>
+<script src="js/jquery.tools.min.js"></script>
 <title>Marcin</title>
 </head>
 
-<body onLoad="init();">
+<body>
 
-	<div id="leftSide">
+    <div id="leftSide">
     
         <div id="goodguys">
               
@@ -42,52 +42,43 @@
     <form id="myform">
     	
         <fieldset>
-            
-            <h3>Sample Form</h3>
-            <p> Enter bad values and then press the submit button. </p>
-            
-            <p>
-            	<label>email *</label>
-            	<input type="email" name="email" required="required" />
-            </p>
-            
-            <p>
-            	<label>name *</label>
-            	<input type="text" name="name" pattern="[a-zA-Z ]{5,}" maxlength="30" />
-            </p>
-            
+                    
             <p>
             	<label>Number of Players</label>
-            	<input type="number" name="players" size="4" min="2" max="5" />
+            	<input type="number" name="players" size="4" min="2" max="5" value="2" />
             </p>
             
-            <p id="checkboxes">
-            	<label>Normal Box</label>
-                <input type="checkbox" />
-                <label>Dark City Expansion</label>
-                <input type="checkbox" />
+            <p id="gameType">
+                <label>Play as Heroes</label>
+                <input type="radio" name="game" value="good" checked />
+                <br>
+                <label>Play as Villains</label>
+                <input type="radio" name="game" value="evil"/>
+            </p>
+            
+            <p id="heroExpansions">
+                <label>Dark City</label>
+                <input type="checkbox" name="expansionH" value="dc"/><br>
                 <label>Secret Wars I</label>
-                <input type="checkbox" />
+                <input type="checkbox" name="expansionH" value="swi" /><br>
                 <label>Secret Wars II</label>
-                <input type="checkbox" />
-                <label>Captain America 75th Anniversity</label>
-                <input type="checkbox" />
-                <label>Guardians of the Galaxy</label>
-                <input type="checkbox" />
-                <label>Fantastic Four</label>
-                <input type="checkbox" />
+                <input type="checkbox" name="expansionH" value="swii" /><br>
                 <label>Paint the Town Red</label>
-                <input type="checkbox" />
-            <p id="terms">
-            
-            <p id="villainCheckboxes">
-            	<label>Normal Box</label>
-                <input type="checkbox" />
-                <label>Fear Itself</label>
-                <input type="checkbox" />
+                <input type="checkbox" name="expansionH" value="pttr"/><br>
+                <label>Fantastic Four</label>
+                <input type="checkbox" name="expansionH" value="ff"/><br>
+                <label>Guardians of the Galaxy</label>
+                <input type="checkbox" name="expansionH" value="gotg"/><br>
+                <label>Captain America 75th Anniversity</label>
+                <input type="checkbox" name="expansionH" value="ca75"/>
             </p>
             
-            <button type="submit">Submit form</button>
+            <p id="villainExpansions">
+                <label>Fear Itself</label>
+                <input type="checkbox" name="expansionV" value="fi"/>
+            </p>
+            
+            <button type="button" onClick="init();">Submit form</button>
             <button type="reset">Reset</button>
             
 		</fieldset>

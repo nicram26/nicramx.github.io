@@ -1,9 +1,8 @@
 body {
-    /*padding:50px 80px;*/
+
     font-family:"Lucida Grande","bitstream vera sans","trebuchet ms",sans-serif,verdana;
 }
 
-/* get rid of those system borders being generated for A tags */
 a:active {
     outline:none;
 }
@@ -30,7 +29,6 @@ a:active {
 	background-color:green;
 }
 
-/* root element for goodguys. decorated with rounded borders and gradient background image */
 #goodguys, #badguys, #showdown {
     text-align:center;
 	background:#333 0 0;
@@ -42,7 +40,6 @@ a:active {
 	position:absolute;
 }
 
-/* goodguys header */
 #goodguys h2, #badguys h2, #showdown h2 {
     background:#ccc;
     line-height: 14px;
@@ -55,13 +52,11 @@ a:active {
     cursor:pointer;
 }
 
-/* currently active header */
 #goodguys h2.current, #badguys h2.current, showdown h2.current {
     cursor:default;
     background-color:#fff;
 }
 
-/* goodguys pane */
 #goodguys .pane, #badguys .pane, #showdown .pane {
     border:1px solid #fff;
     border-width:0 2px;
@@ -72,7 +67,6 @@ a:active {
     font-size:12px;
 }
 
-/* a title inside pane */
 #goodguys .pane h3, #badguys .pane h3, #showdown .pane h3{
     font-weight:normal;
     margin:0;

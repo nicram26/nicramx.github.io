@@ -1,71 +1,90 @@
-var baseBox = {
+//Base Box
+var hb = {
 	heroes: ["Black Widow","Captain America","Cyclops","Deadpool","Emma Frost","Gambit","Hawkeye","Hulk","Iron Man","Nick Fury","Rogue","Spider-Man","Storm","Thor","Wolverine"],
 	masterminds: ["Dr. Doom","Loki","Magneto","Red Skull"],
 	villains: ["Brotherhood","Enemies of Asgard","HYDRA","Masters of Evil","Radiation","Skrulls","Spider-foes"],
-	henchmen: ["Doombot Legion","Hand Ninjas","Savage Land Mutates","Sentinels"]
+	henchmen: ["Doombot Legion","Hand Ninjas","Savage Land Mutates","Sentinels"],
+	schemes: ["Midtown Bank Robbery","Negative Zone Prison Breakout","Portals to Dark Dimension","Replace Earth's Leaders with Killbots","Secret Invasion of the Skrull Shapeshifters","Super Hero Civil War","The Legacy Virus","Unleash the Power of the Cosmic Cube"]
 };
 
-var darkCity = {
+//Dark City Expanion
+var dc = {
 	heroes: ["Angel","Bishop","Blade","Cable","Colossus","Daredevil","Domino","Elektra","Forge","Ghost Rider","Iceman","Iron Fist","Jean Grey","Nightcrawler","Professor X","Punisher","Wolverine (Expansion)"],
 	masterminds: ["Apocalypse","Kingpin","Mephisto","Mr. Sinister","Stryfe"],
 	villains: ["Emissaries of Evil","Four Horsemen","Marauders","MLF","Streets of New York","Underworld"],
-	henchmen: ["Maggia Goons","Phalanx"]
+	henchmen: ["Maggia Goons","Phalanx"],
+	schemes: ["Capture Baby Hope","Detonate the Helicarrier","Massive Earthquake Generator","Organized Crime Wave","Save Humanity","Steal the Weaponized Plutonium","Transform Citizens Into Demons","X-Cutioner's Song"]
 };
 
-var secretWarsI = {
+//Secret Wars Volume I Expansion
+var swi = {
 	heroes: ["Apocalyptic Kitty Pryde","Black Bolt","Black Panther","Captain Marvel","Dr. Strange","Lady Thor","Magik","Maximus","Namor, the Sub-Mariner","Old Man Logan","Proxima Midnight","Superior Iron Man","Thanos","Ultimate Spider-Man"],
 	masterminds: ["Madelyn Pryor, Goblin Queen","Nimord","Wasteland Hulk","Zombie Green Goblin"],
 	villains: ["Domain of Apocalypse","Limbo","Manhattan (Earth-1610)","Sentinel Territories","The Deadlands","Wasteland"],
-	henchmen: ["Ghost Racers","M.O.D.O.K.s","Thor Corps"]
+	henchmen: ["Ghost Racers","M.O.D.O.K.s","Thor Corps"],
+	schemes: ["Building an Army of Annihilation","Corrupt the Next Generation of Heroes","Crush Them With My Bare Hands","Dark Alliance","Fragmented Realities","Master of Tyrants","Pan-Dimensional Plagye","Smash the Two Dimensions Together"]
 };
 
-var secretWarsII = {
+//Secret Wars Volume II Expansion
+var swii = {
 	heroes: ["Agent Venom","Arkon the Magnificent","Beast","Black Swan","Captain Britain","Corvus Glaive","Dr. Punisher, Soldier Supreme","Elsa Bloodstone","Phoenix Force Cyclops","Ruby Summers","Shang-Chi","Silk","Soulsword Colossus","Spider-Gwen","The Captain and the Devil","Time-Traveling Jean Grey"],
 	masterminds: ["Immortal Emperor Zheng-Zu","King Hyperion","Shiklah, the Demon Bride","Spider-Queen"],
 	villains: ["Deadpool's Secret Secret Wars","Guadians of Knowwhere","K'un-Lun","Monster Metropolis","Utopolis","X-Men '92"],
-	henchmen: ["Khonshu Guardians","Magma Men","Spider-Infected"]
+	henchmen: ["Khonshu Guardians","Magma Men","Spider-Infected"],
+	schemes: ["Deadlands Hordes Charge thw Wall","Enthrone the Barons of Battleworld","Master the Mysteries of Kung-Fu","Secret Wars","Sinister Ambitions","The Fountain of Eternal Life","The God-Emperor of Battleworld","The Mark of Khonshu"]
 };
 
-var paintTheTownRed = {
+//Paint the Town Red Expansion
+var pttr = {
 	heroes: ["Black Cat","Moon Knight","Scarlet Spider","Spider Woman","Symbiote Spider-Man"],
 	masterminds: ["Carnage","Mysterio"],
 	villains: ["Maximum Carnage","Sinister Six"],
-	henchmen: []
+	henchmen: [],
+	schemes: ["Invade the Daily Bugles News HQ","Splice Humans with Spider DNA","The Clone Saga","Weave a Web of Lies"]
 };
 
-var fantasticFour = {
+//Fantastic Four Expansion
+var ff = {
 	heroes: ["Human Torch","Invisible Woman","Mr. Fantastic","Silver Surfer","Thing"],
 	masterminds: ["Galactus","Mole Man"],
 	villains: ["Heralds of Galactus","Subterranea"],
-	henchmen: []
+	henchmen: [],
+	schemes: ["Bathe Earth in Cosmic Rays","Flood the Planet with Melted Glaciers","Invincible Force Field","Pull Reality into the Negative Zone"]
 };
 
-var guardiansOfTheGalaxy = {
+//Guardians of the Galaxy Expansion
+var gotg = {
 	heroes: ["Drax the Destroyer","Gamora","Groot","Rocket Raccoon","Star-Lord"],
 	masterminds: ["Supreme Intelligence of the Kree","Thanos"],
 	villains: ["Infinity Gems","Kree Starforce"],
-	henchmen: []
+	henchmen: [],
+	schemes: ["Forge the Infinity Gauntlet","Intergalactic Kree Nega-Bomb","The Kree-Skrull War","Unite the Shards"]
 };
 
-var captainAmerica75th = {
+//Captain America 75th Anniversary Expansion
+var ca75 = {
 	heroes: ["Agent X-13","Captain America 1941","Falcon","Steve Rogers","Winter Soldier"],
 	masterminds: ["Arnim Zola","Baron Heinrich Zemo"],
 	villains: ["Masters of Evil (WWII)","Zola's Creations"],
-	henchmen: []
+	henchmen: [],
+	schemes: ["Brainwash the Miltary","Change the Outcome of WWII","Go Back in Time to Slay Heroes' Ancestors","The Unbreaking Enigma Code"]
 };
 
-var allHeroes = ["Agent Venom","Agent X-13","Angel","Apocalyptic Kitty Pryde","Arkon the Magnificent","Beast","Bishop","Black Bolt","Black Cat","Black Panther","Black Swan","Black Widow","Blade","Cable","Captain America","Captain America 1941","Captain Britain","Captain Marvel","Colossus","Corvus Glaive","Cyclops","Daredevil","Deadpool","Domino","Dr. Punisher, Soldier Supreme","Dr. Strange","Drax the Destroyer","Elektra","Elsa Bloodstone","Emma Frost","Falcon","Forge","Gambit","Gamora","Ghost Rider","Groot","Hawkeye","Hulk","Human Torch","Iceman","Invisible Woman","Iron Fist","Iron Man","Jean Grey","Lady Thor","Magik","Maximus","Moon Knight","Mr. Fantastic","Namor, the Sub-Mariner","Nick Fury","Nightcrawler","Old Man Logan","Phoenix Force Cyclops","Professor X","Proxima Midnight","Punisher","Rocket Raccoon","Rogue","Ruby Summers","Scarlet Spider","Shang-Chi","Silk","Silver Surfer","Soulsword Colossus","Spider Woman","Spider-Gwen","Spider-Man","Star-Lord","Steve Rogers","Storm","Superior Iron Man","Symbiote Spider-Man","Thanos","The Captain and the Devil","Thing","Thor","Time-Traveling Jean Grey","Ultimate Spider-Man","Winter Soldier","Wolverine","Wolverine (Expansion)"];
+var allTypes = {};
 
-var allMasterminds = ["Apocalypse","Arnim Zola","Baron Heinrich Zemo","Carnage","Dr. Doom","Galactus","Immortal Emperor Zheng-Zu","King Hyperion","Kingpin","Loki","Madelyn Pryor, Goblin Queen","Magneto","Mephisto","Mole Man","Mr. Sinister","Mysterio","Nimord","Red Skull","Shiklah, the Demon Bride","Spider-Queen","Stryfe","Supreme Intelligence of the Kree","Thanos","Wasteland Hulk","Zombie Green Goblin"];
-
-var alwaysLeads = ["Four Horsemen","Masters of Evil (WWII)","Zola's Creations","Maximum Carnage","Doombot Legion","Heralds of Galactus","K'un-Lun","Utopolis","Streets of New York","Enemies of Asgard","Limbo","Brotherhood","Underworld","Subterranea","Marauders","Sinister Six","Sentinel Territories","HYDRA","Monster Metropolis","Spider-Infected","MLF","Infinity Gems","Kree Starforce","Wasteland","The Deadlands"];
-
-var allVillains = ["Brotherhood","Deadpool's Secret Secret Wars","Domain of Apocalypse","Emissaries of Evil","Enemies of Asgard","Four Horsemen","Guadians of Knowwhere","Heralds of Galactus","HYDRA","Infinity Gems","Kree Starforce","K'un-Lun","Limbo","Manhattan (Earth-1610)","Marauders","Masters of Evil","Masters of Evil (WWII)","Maximum Carnage","MLF","Monster Metropolis","Radiation","Sentinel Territories","Sinister Six","Skrulls","Spider-foes","Streets of New York","Subterranea","The Deadlands","Underworld","Utopolis","Wasteland","X-Men '92","Zola's Creations"];
-
-var allHenchmen =["Doombot Legion","Ghost Racers","Hand Ninjas","Khonshu Guardians","M.O.D.O.K.s","Maggia Goons","Magma Men","Phalanx","Savage Land Mutates","Sentinels","Spider-Infected","Thor Corps"];
+function setupAllH() {
+	allTypes = combineObjects(hb,dc,swi,swii,pttr,ff,gotg,ca75);
+	var keys = Object.keys(allTypes);
+	for(var i=0; i<keys.length; i++) {
+		picked[keys[i]] = [];
+	}
+	allTypes['mastermindsLeads'] = ["Four Horsemen","Masters of Evil (WWII)","Zola's Creations","Maximum Carnage","Doombot Legion","Heralds of Galactus","K'un-Lun","Utopolis","Streets of New York","Enemies of Asgard","Limbo","Brotherhood","Underworld","Subterranea","Marauders","Sinister Six","Sentinel Territories","HYDRA","Monster Metropolis","Spider-Infected","MLF","Kree Starforce","Infinity Gems","Wasteland","The Deadlands"];	
+}
 
 //for the cards allowed in the game
 var fullList = {};
+//for the cards picked for the game
+var picked = {};
 
 //number of each type required to play
 var numOfPlayers;
@@ -73,40 +92,12 @@ var numOfHeroes;
 var numOfVillians;
 var numOfHenchmen;
 
-//random of each type
-var heroList = [];
-var villainList = [];
-var henchmenList = [];
-var mastermindList = [];
-
-//index of the random selections
-var indexHeroes = [];
-var indexVillains = [];
-var indexHenchmen = [];
-var indexMastermind = [];
-
 //for if the mastermind leads henchmen or villains
 var leadsHenchmen = false;
 var leadsVillains = false;
 
-//Combines any number of objects into one object
-function combineObjects() {
-	var keys = [];
-	keys = Object.keys(arguments[0]);
-	
-	for(var i = 0; i<arguments.length; i++) {
-		for(var j = 0; j<keys.length; j++) {
-			if(i == 0) {
-				fullList[keys[j]] = arguments[0][keys[j]];
-			}
-			else fullList[keys[j]] = fullList[keys[j]].concat(arguments[i][keys[j]]);
-			fullList[keys[j]].sort();
-		}
-	}	
-}
-
 //Setups the number of heroes, villain groups, and henchmen
-function initialSetup(num) {
+function heroesSetup(num) {
 	if(num == 2) {
 		numOfHeroes = 5;
 		numOfVillains = 2;
@@ -129,90 +120,45 @@ function initialSetup(num) {
 	}
 }
 
-//Sets the heroes for the game
-function pickHeroes(num) {
-	var count;
-	var x;
-	var b;
-	var tempList = fullList['heroes'].slice();
-	for(count = 0; count < num; count++) {
-		x = Math.floor(Math.random()*tempList.length);	
-		heroList.push(tempList[x]);
-		tempList.splice(x,1);
-	}
-	index(allHeroes, heroList, indexHeroes);
-}
-
-//Sets the villain groups for the game
-function pickVillains(num) {
-	var count;
-	var x;
-	var tempList = fullList['villains'].slice();
-	if (leadsVillains == true) {
-		villainList.push(alwaysLeads[indexMastermind[0]-1]);
-		tempList.splice(allVillains.indexOf(villainList[0]),1)
-	}
-	for(count = 0; count < num; count++) {
-		x = Math.floor(Math.random()*tempList.length);
-		villainList.push(tempList[x]);
-		tempList.splice(x,1);
-	}
-	index(allVillains, villainList, indexVillains);
-}
-
-//Sets the henchmen for the game
-function pickHenchmen(num) {
-	var count;
-	var x;
-	var tempList = fullList['henchmen'].slice();
-	if (leadsHenchmen == true) {
-		henchmenList.push(alwaysLeads[indexMastermind[0]-1]);
-		tempList.splice(allHenchmen.indexOf(henchmenList[0]),1)
-	}
-	for(count = 0; count < num; count++) {
-		x = Math.floor(Math.random()*tempList.length);
-		henchmenList.push(tempList[x]);
-		tempList.splice(x,1);
-	}
-	index(allHenchmen, henchmenList, indexHenchmen);	
-}
-
-//Sets the mastermind for the game
-function pickMastermind() {
-	var tempList = fullList['masterminds'].slice();
-	var x = Math.floor(Math.random()*tempList.length);
-	mastermindList.push(tempList[x]);
-	indexMastermind.push(x+1);
-	
-	if(allHenchmen.indexOf(alwaysLeads[x]) > -1) {
+//Checks to see if the mastermind leads a villain or a henchmen group
+function leadsTypeH(key, picks, everything) {
+	var x = picks[key+'Index'][0] - 1;
+	if(everything['henchmen'].indexOf(everything[key+'Leads'][x]) > -1) {
 		leadsHenchmen = true;
-		numOfHenchmen -= 1;	
+		leadsVillains = false;
+		numOfHenchmen -= 1;
+		picks['henchmen'].push(everything[key+'Leads'][x]); 
+		for (var i=0; i<fullList['henchmen'].length; i++) {
+			if (fullList['henchmen'][i] === everything[key+'Leads'][x])
+        		fullList['henchmen'].splice(i, 1); 
+		}	
 	}
-	if(allVillains.indexOf(alwaysLeads[x]) > -1) {
+	else if(everything['villains'].indexOf(everything[key+'Leads'][x]) > - 1) {
 		leadsVillains = true;
-		numOfVillains -= 1;	
-	} 
-}
-
-//Gets the index of the heroes from the all heroes list so an image can be got
-function index(oldArr, newArr, indexArr) {
-	var x;
-	for(var i = 0; i < newArr.length; i++) {
-		x = oldArr.indexOf(newArr[i].toString());
-		indexArr.push(x+1);
+		leadsHenchmen = false;
+		numOfVillains -= 1;
+		picks['villains'].push(everything[key+'Leads'][x]);
+		for (var j=0; j<fullList['villains'].length; j++) {
+			if (fullList['villains'][j] === everything[key+'Leads'][x])
+        		fullList['villains'].splice(j, 1); 
+		}
 	}
 }
 
 //Initialize
-function initialize() {
-	resetAll();
-	numOfPlayers = prompt("Please enter the number of players");
-	initialSetup(numOfPlayers);
-	combineObjects(baseBox,darkCity,secretWarsI,secretWarsII,paintTheTownRed,fantasticFour,guardiansOfTheGalaxy,captainAmerica75th);
-	pickHeroes(numOfHeroes);
-	pickMastermind();
-	pickVillains(numOfVillains);
-	pickHenchmen(numOfHenchmen);
+function initializeHeroes(sets) {
+	setupAllH();
+	numOfPlayers = document.getElementById("myform").players.value;
+	heroesSetup(numOfPlayers);
+	if(sets != "")
+		fullList = eval("combineObjects(hb," + sets + ")");
+	else fullList = combineObjects(hb);
+	pickItems('masterminds', 1, picked, fullList, allTypes);
+	leadsTypeH('masterminds', picked, allTypes);
+	pickItems('schemes', 1, picked, fullList, allTypes);
+	pickItems('heroes', numOfHeroes, picked, fullList, allTypes);
+	pickItems('villains', numOfVillains, picked, fullList, allTypes);
+	pickItems('henchmen', numOfHenchmen, picked, fullList, allTypes);
 }
 
 function resetAll() {
@@ -228,6 +174,8 @@ function resetAll() {
 	indexVillains = [];
 	indexHenchmen = [];
 	indexMastermind = [];
+	fullList = {};
+	picked = {};
 	leadsHenchmen = false;
 	leadsVillains = false;	
 }
