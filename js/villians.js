@@ -37,7 +37,6 @@ function setupAllV() {
 var fullList = {};
 
 //number of each type required to play
-var numOfPlayers;
 var numOfAllies;
 var numOfAdversaries;
 var numOfBackup;
@@ -108,10 +107,9 @@ function leadsTypeV(key, picks, everything) {
 }
 
 //Initialize
-function initializeVillains(sets) {
+function initializeVillains(sets,players) {
 	setupAllV();
-	numOfPlayers = document.getElementById("myform").players.value;
-	villainsSetup(numOfPlayers);
+	villainsSetup(players);
 	if(sets != "")
 		fullList = eval("combineObjects(vb," + sets + ")");
 	else fullList = combineObjects(vb);
@@ -124,7 +122,6 @@ function initializeVillains(sets) {
 }
 
 function resetAll() {
-	numOfPlayers = 0;
 	numOfAllies = 0;
 	numOfAdversaries = 0;
 	numOfBackup = 0;

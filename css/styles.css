@@ -77,3 +77,62 @@ a:active {
 button:hover {
 	cursor:pointer;	
 }
+
+
+ul {
+  list-style: none;
+}
+ul li {
+  padding: 0.2em;
+  display: inline-block;
+}
+
+label.styled {
+  background-color: #f8a901;
+  display: block;
+  width: 300px;
+  text-align: center;
+  padding: 0.6em 2em;
+  color: #fff;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+label.styled:before {
+  content: '✓';
+  line-height: 40px;
+  font-size: 25px;
+  color: #fff;
+  width:40px;
+  height:100%; 
+  background-color: #9a5502;
+  position: absolute;
+  top:0;
+  left:100%;
+  transition: all 0.4s ease;
+  opacity: 0;
+  border-right: 2px solid #fff;
+}
+label.styled:hover:before {
+  left: 98%;
+  opacity: .3;
+}
+input.styled {
+  display: none;
+}
+
+/* :: CHECKED :: */
+input.styled:checked ~ label.styled {
+  background-color: #f88701;
+  animation: throw 0.5s linear;
+}
+input.styled:checked ~ label.styled:before {
+  left:0px;
+  opacity: 1;
+}
+@keyframes throw {
+   0%,63% {margin-left: 0;}
+   64% {margin-left: -5px;}
+   100% {margin-left: 0;}
+}

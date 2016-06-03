@@ -43,43 +43,84 @@
     	
         <fieldset>
                     
-            <p>
-            	<label>Number of Players</label>
-            	<input type="number" name="players" size="4" min="2" max="5" value="2" />
+            <p id="numberPlayers">
+            	<ul>
+                	<li>
+                        <input type="radio" name="players" value="2" checked class="styled" id="a_1"/>
+                        <label class="styled" for="a_1">Two</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="players" value="3" class="styled" id="a_2"/>
+                        <label class="styled" for="a_2">Three</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="players" value="4" class="styled" id="a_3"/>
+                        <label class="styled" for="a_3">Four</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="players" value="5" class="styled" id="a_4"/>
+                        <label class="styled" for="a_4">Five</label>
+                    </li>
+                </ul>
             </p>
             
             <p id="gameType">
-                <label>Play as Heroes</label>
-                <input type="radio" name="game" value="good" checked />
-                <br>
-                <label>Play as Villains</label>
-                <input type="radio" name="game" value="evil"/>
+            	<ul>
+              		<li>
+                		<input type="radio" name="game" value="good" checked class="styled" id="b_1"/>
+                        <label class="styled" for="b_1">Play as Heroes</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="game" value="evil" class="styled" id="b_2"/>
+						<label class="styled" for="b_2">Play as Villains</label>
+                    </li>
+				</ul>
             </p>
             
             <p id="heroExpansions">
-                <label>Dark City</label>
-                <input type="checkbox" name="expansionH" value="dc"/><br>
-                <label>Secret Wars I</label>
-                <input type="checkbox" name="expansionH" value="swi" /><br>
-                <label>Secret Wars II</label>
-                <input type="checkbox" name="expansionH" value="swii" /><br>
-                <label>Paint the Town Red</label>
-                <input type="checkbox" name="expansionH" value="pttr"/><br>
-                <label>Fantastic Four</label>
-                <input type="checkbox" name="expansionH" value="ff"/><br>
-                <label>Guardians of the Galaxy</label>
-                <input type="checkbox" name="expansionH" value="gotg"/><br>
-                <label>Captain America 75th Anniversity</label>
-                <input type="checkbox" name="expansionH" value="ca75"/>
+            	<ul>
+                    <li>
+                    	<input type="checkbox" name="expansionH" value="dc" class="styled" id="c_1"/>
+                    	<label class="styled" for="c_1">Dark City</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="expansionH" value="swi" class="styled" id="c_2"/>
+                        <label class="styled" for="c_2">Secret Wars I</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="expansionH" value="swii" class="styled" id="c_3"/>
+                        <label class="styled" for="c_3">Secret Wars II</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="expansionH" value="pttr" class="styled" id="c_4"/>
+                        <label class="styled" for="c_4">Paint the Town Red</label>
+                    </li>
+                    <li>                        
+                        <input type="checkbox" name="expansionH" value="ff" class="styled" id="c_5"/>
+                        <label class="styled" for="c_5">Fantastic Four</label>
+                    </li>
+                    <li>                        
+                        <input type="checkbox" name="expansionH" value="gotg" class="styled" id="c_6"/>
+                        <label class="styled" for="b_6">Guardians of the Galaxy</label>
+                    </li>
+                    <li>                        
+                        <input type="checkbox" name="expansionH" value="ca75" class="styled" id="c_7"/>
+                        <label class="styled" for="c_7">Captain America 75th Anniversity</label>
+                    </li>
+                </ul>
             </p>
             
             <p id="villainExpansions">
-                <label>Fear Itself</label>
-                <input type="checkbox" name="expansionV" value="fi"/>
+            	<ul>
+                	<li>
+                		<input type="checkbox" name="expansionV" value="fi" class="styled" id="c_8"/>
+                		<label class="styled" for="c_8">Fear Itself</label>
+            		</li>
+                </ul>
             </p>
             
-            <button type="button" onClick="init();">Submit form</button>
-            <button type="reset">Reset</button>
+            <button type="button" onClick="init();">Generate</button>
+            <button type="reset">New Game</button>
             
 		</fieldset>
         

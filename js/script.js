@@ -1,6 +1,7 @@
 var heroesGame;
 var villainsGame;
 
+//Checks the radio buttons if hero or villain game
 function checkGameType() {
 	if(document.getElementById("myform").game[0].checked) {
 		heroesGame = true;
@@ -12,6 +13,7 @@ function checkGameType() {
 	}
 }
 
+//Checks to see what expansions are selected
 function checkBoxes() {
 	var result = "";
 	if(heroesGame) {
@@ -29,6 +31,27 @@ function checkBoxes() {
 	result = result.substring(0,result.length-1);
 	return result;
 }
+
+//Checks to see how many players are there
+function checkPlayers() {
+	var num;
+	for(var i=0; i<document.getElementById("myform").players.length; i++) {
+		if(document.getElementById("myform").players[i].checked)
+			num = document.getElementById("myform").players[i].value;
+			
+	}
+	return num;	
+}
+
+//function hideVillains() {
+//	document.getElementById("villainExpansions").fadeOut();
+//	document.getElementById("heroExpansions").fadeIn();
+//}
+//
+//function hideHeroes() {
+//	document.getElementById("villainExpansions").fadeIn();
+//	document.getElementById("heroExpansions").fadeOut();	
+//}
 
 function updateLeft() {
 	var a = "";
@@ -91,13 +114,14 @@ function updateMiddle() {
 }
 
 function init() {
+	var p = checkPlayers();
 	checkGameType();
 	var x = checkBoxes();
 	if(heroesGame) {
-		initializeHeroes(x);
+		initializeHeroes(x,p);
 	}
 	else if(villainsGame) {
-		initializeVillains(x);	
+		initializeVillains(x,p);	
 	}
 	updateLeft();
 	updateRight();

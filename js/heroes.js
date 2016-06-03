@@ -87,7 +87,6 @@ var fullList = {};
 var picked = {};
 
 //number of each type required to play
-var numOfPlayers;
 var numOfHeroes;
 var numOfVillians;
 var numOfHenchmen;
@@ -146,10 +145,9 @@ function leadsTypeH(key, picks, everything) {
 }
 
 //Initialize
-function initializeHeroes(sets) {
+function initializeHeroes(sets,numP) {
 	setupAllH();
-	numOfPlayers = document.getElementById("myform").players.value;
-	heroesSetup(numOfPlayers);
+	heroesSetup(numP);
 	if(sets != "")
 		fullList = eval("combineObjects(hb," + sets + ")");
 	else fullList = combineObjects(hb);
@@ -162,7 +160,6 @@ function initializeHeroes(sets) {
 }
 
 function resetAll() {
-	numOfPlayers = 0;
 	numOfHeroes = 0;
 	numOfVillains = 0;
 	numOfHenchmen = 0;
